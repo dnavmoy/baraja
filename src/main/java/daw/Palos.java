@@ -24,6 +24,16 @@ public enum Palos {
     public String getPalo() {
         return palo;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Palos{");
+        sb.append("palo=").append(palo);
+        sb.append('}');
+        return sb.toString();
+    }
+    
     
     
     

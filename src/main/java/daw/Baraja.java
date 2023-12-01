@@ -10,4 +10,16 @@ package daw;
  */
 public class Baraja {
     
+    Naipe[] array;
+
+    public Baraja(Naipe[] array) {
+        for(int i=0;i<array.length;i++){
+            
+            
+        }
+        this.array = array;
+    }
+    
+    
+    
 }
