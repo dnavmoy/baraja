@@ -34,7 +34,7 @@ public class naipe {
 
     public naipe() {
 
-        this.numero = r.nextInt(ultimaCarta + 1);
+        this.numero = r.nextInt(1, ultimaCarta+1);
         int rPalo = r.nextInt(palos.values().length);
         switch (rPalo) {
             case 0 ->
