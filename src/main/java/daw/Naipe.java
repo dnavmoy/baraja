@@ -10,7 +10,7 @@ import java.util.Random;
  *
  * @author daniel
  */
-public class naipe {
+public class Naipe {
 
     //clase naipe - dos atributos: numero carta y palo
 //1-7 8 sota 9 caballo 10 rey
@@ -22,9 +22,9 @@ public class naipe {
     private final int ultimaCarta = 10;
 
     private int numero;
-    private palos palo;
+    private Palos palo;
 
-    public naipe(int numero, palos palo) {
+    public Naipe(int numero, Palos palo) {
         if (numero < 1 || numero > 9) {
             throw new IllegalArgumentException("numero de carta no valido");
         }
@@ -32,13 +32,13 @@ public class naipe {
         this.palo = palo;
     }
 
-    public naipe() {
+    public Naipe() {
 
         this.numero = r.nextInt(1, ultimaCarta+1);
-        int rPalo = r.nextInt(palos.values().length);
+        int rPalo = r.nextInt(Palos.values().length);
         switch (rPalo) {
             case 0 ->
-                this.palo = palos.bastos;
+                this.palo = Palos.bastos;
             case 1 ->
                 this.palo = palo.copa;
             case 2 ->
@@ -53,7 +53,7 @@ public class naipe {
         return numero;
     }
 
-    public palos getPalo() {
+    public Palos getPalo() {
         return palo;
     }
 
@@ -61,7 +61,7 @@ public class naipe {
         this.numero = numero;
     }
 
-    public void setPalo(palos palo) {
+    public void setPalo(Palos palo) {
         this.palo = palo;
     }
 

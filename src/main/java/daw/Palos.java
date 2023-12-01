@@ -8,14 +8,14 @@ package daw;
  *
  * @author daniel
  */
-public enum palos {
+public enum Palos {
     
     oro("oro"),copa("copa"),bastos("bastos"),espadas("espadas");
     
     
     private String palo;
 
-    private palos(String palo) {
+    private Palos(String palo) {
         this.palo = palo;
     }
     

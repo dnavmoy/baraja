@@ -7,7 +7,7 @@ package daw;
  *
  * @author daniel
  */
-public class main {
+public class Main {
 
 //    nuevo proyecto
 //clase baraja
@@ -17,19 +17,28 @@ public class main {
 //	
 //main para crear naipes sueltos
 //	y crear baraja y mostrar todas las cartas  
-//      sacar catas aleatoriamente hata que salga la carta que se solicita al ususario
+//      sacar cartas aleatoriamente hata que salga la carta que se solicita al ususario
     public static void main(String[] args) {
 
-        naipe[] pruebaArray = new naipe[50];
+        Naipe[] pruebaArray = new Naipe[50];
 
         for (int i = 0; i < pruebaArray.length; i++) {
-            pruebaArray[i] = new naipe();
+            pruebaArray[i] = new Naipe();
 
         }
         for (int i = 0; i < pruebaArray.length; i++) {
             System.out.println(pruebaArray[i]);
 
         }
+     
+        try{
+        Naipe pruebaNaipe = new Naipe( 7, Palos.oro);
+        System.out.println("prueba naipe es : " + pruebaNaipe);
+        }catch (IllegalArgumentException IAE){
+            System.out.println(IAE.getMessage());
+        }
+        
+                   
         
     }
 }

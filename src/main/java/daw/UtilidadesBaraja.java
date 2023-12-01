@@ -8,6 +8,6 @@ package daw;
  *
  * @author daniel
  */
-public class baraja {
+public class UtilidadesBaraja {
     
 }
