@@ -8,7 +8,7 @@ package daw;
  *
  * @author daniel
  */
-public class Baraja {
+public class main {
 
     public static void main(String[] args) {
        
