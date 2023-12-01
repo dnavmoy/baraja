@@ -23,8 +23,8 @@ public class main {
 //	
 //	
 //main para crear naipes sueltos
-//	y crear baraja
-//    
+//	y crear baraja y mostrar todas las cartas  
+//      sacar catas aleatoriamente hata que salga la carta que se solicita al ususario
     
     public static void main(String[] args) {
        

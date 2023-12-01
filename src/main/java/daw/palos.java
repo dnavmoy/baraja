@@ -10,4 +10,21 @@ package daw;
  */
 public enum palos {
     
+    oro("oro"),copa("copa"),bastos("bastos"),espadas("espadas");
+    
+    
+    private String palo;
+
+    private palos(String palo) {
+        this.palo = palo;
+    }
+    
+    
+
+    public String getPalo() {
+        return palo;
+    }
+    
+    
+    
 }
