@@ -18,6 +18,8 @@ public class Main {
 //main para crear naipes sueltos
 //	y crear baraja y mostrar todas las cartas  
 //      sacar cartas aleatoriamente hata que salga la carta que se solicita al ususario
+    
+    //prueba git 
     public static void main(String[] args) {
 
         Naipe[] pruebaArray = new Naipe[50];
