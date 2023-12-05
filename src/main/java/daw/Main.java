@@ -3,6 +3,7 @@
  */
 package daw;
 
+
 /**
  *
  * @author daniel
@@ -51,8 +52,14 @@ public class Main {
 //            System.out.println(IAE.getMessage());
 //        }
 //        
-//       
-                   
+//       Ba
+           
+
         
+        System.out.println("Mostrar una baraja entera: ");
+     
+        parteB.Baraja nuevaBaraja = new parteB.Baraja();
+        
+         System.out.println(nuevaBaraja);
     }
 }
