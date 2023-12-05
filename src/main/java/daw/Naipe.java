@@ -58,7 +58,7 @@ public class Naipe {
     }
 
     public void setNumero(int numero) {
-         if (numero < 1 || numero > 9) {
+         if (numero < 1 || numero > 10) {
             throw new IllegalArgumentException("numero de carta no valido");
         }
         this.numero = numero;

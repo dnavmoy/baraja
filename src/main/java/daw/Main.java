@@ -58,8 +58,12 @@ public class Main {
         
         System.out.println("Mostrar una baraja entera: ");
      
-        parteB.Baraja nuevaBaraja = new parteB.Baraja();
+        parteB.Baraja pruebaBaraja = new parteB.Baraja();
         
-         System.out.println(nuevaBaraja);
+         System.out.println(pruebaBaraja);
+        
+        pruebaBaraja.barajar(15);
+        System.out.println(pruebaBaraja);
+        
     }
 }

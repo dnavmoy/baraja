@@ -4,12 +4,24 @@
  */
 package daw;
 
+import java.util.Random;
+
 /**
  *
  * @author daniel
  */
 public class UtilidadesBaraja {
     
+    
+    public static void barajar(int movimientos){
+        
+        for (int i=0;i<movimientos;i++){
+            Random r = new Random();
+            
+            
+        }
+        
+    }
     
     
 }
