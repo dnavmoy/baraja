@@ -20,6 +20,7 @@ public class Main {
 //      sacar cartas aleatoriamente hata que salga la carta que se solicita al ususario
     
     //prueba git 
+    //prueba git 2
     public static void main(String[] args) {
 
         Naipe[] pruebaArray = new Naipe[50];
