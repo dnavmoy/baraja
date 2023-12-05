@@ -10,7 +10,7 @@ package daw;
  */
 public enum Palos {
     
-    oro("oro"),copa("copa"),bastos("bastos"),espadas("espadas");
+    Oro("oro"),Copa("copa"),Bastos("bastos"),Espadas("espadas");
     
     
     private String palo;

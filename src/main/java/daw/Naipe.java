@@ -25,7 +25,7 @@ public class Naipe {
     private Palos palo;
 
     public Naipe(int numero, Palos palo) {
-        if (numero < 1 || numero > 9) {
+        if (numero < 1 || numero > 10) {
             throw new IllegalArgumentException("numero de carta no valido");
         }
         this.numero = numero;
@@ -38,13 +38,13 @@ public class Naipe {
         int rPalo = r.nextInt(Palos.values().length);
         switch (rPalo) {
             case 0 ->
-                this.palo = Palos.bastos;
+                this.palo = Palos.Bastos;
             case 1 ->
-                this.palo = palo.copa;
+                this.palo = palo.Copa;
             case 2 ->
-                this.palo = palo.espadas;
+                this.palo = palo.Espadas;
             case 3 ->
-                this.palo = palo.oro;
+                this.palo = palo.Oro;
 
         }
     }
@@ -58,6 +58,9 @@ public class Naipe {
     }
 
     public void setNumero(int numero) {
+         if (numero < 1 || numero > 9) {
+            throw new IllegalArgumentException("numero de carta no valido");
+        }
         this.numero = numero;
     }
 

@@ -16,16 +16,16 @@ public class Baraja {
     public Baraja() {
         for(int i=0;i<40;i++){
             for(int z=1;z<11;z++){
-                array[z]=new Naipe(z, Palos.oro);
+                array[z]=new Naipe(z, Palos.Oro);
             }
             for(int z=10;z<21;z++){
-                array[z]=new Naipe(z, Palos.copa);
+                array[z]=new Naipe(z, Palos.Copa);
             }
             for(int z=20;z<31;z++){
-                array[z]=new Naipe(z, Palos.espadas);
+                array[z]=new Naipe(z, Palos.Espadas);
             }
             for(int z=30;z<41;z++){
-                array[z]=new Naipe(z, Palos.bastos);
+                array[z]=new Naipe(z, Palos.Bastos);
             }
         }
         this.array = array;

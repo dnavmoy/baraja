@@ -22,26 +22,36 @@ public class Main {
     //prueba git 
     //prueba git 2
     public static void main(String[] args) {
-
-        Naipe[] pruebaArray = new Naipe[50];
-
-        for (int i = 0; i < pruebaArray.length; i++) {
-            pruebaArray[i] = new Naipe();
-
-        }
-        for (int i = 0; i < pruebaArray.length; i++) {
-            System.out.println(pruebaArray[i]);
-
-        }
-     
-        try{
-        Naipe pruebaNaipe = new Naipe( 7, Palos.oro);
-        System.out.println("prueba naipe es : " + pruebaNaipe);
-        }catch (IllegalArgumentException IAE){
-            System.out.println(IAE.getMessage());
-        }
+            
+        Naipe carta;
+        Naipe ReyOros= new Naipe(10, Palos.Oro);
         
-        //baraja[] nueva = new Baraja();
+         
+        
+          do{
+              carta = new Naipe();
+              System.out.println(carta);
+          }while(!((carta.getNumero()==ReyOros.getNumero())&&carta.getPalo()==ReyOros.getPalo()));
+        
+//        Naipe[] pruebaArray = new Naipe[50];
+//
+//        for (int i = 0; i < pruebaArray.length; i++) {
+//            pruebaArray[i] = new Naipe();
+//
+//        }
+//        for (int i = 0; i < pruebaArray.length; i++) {
+//            System.out.println(pruebaArray[i]);
+//
+//        }
+//     
+//        try{
+//        Naipe pruebaNaipe = new Naipe( 7, Palos.Oro);
+//        System.out.println("prueba naipe es : " + pruebaNaipe);
+//        }catch (IllegalArgumentException IAE){
+//            System.out.println(IAE.getMessage());
+//        }
+//        
+//       
                    
         
     }
