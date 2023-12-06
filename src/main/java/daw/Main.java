@@ -31,13 +31,13 @@ public class Main {
         System.out.println(pruebaBaraja);
 
         int sacarCartas = 15;
-        
+
         System.out.println("saco " + sacarCartas + " cartas");
         Naipe[] cartasSacadas = new Naipe[sacarCartas];
         cartasSacadas = pruebaBaraja.sacar(sacarCartas);
         System.out.println("como queda la baraja: ");
         System.out.println(pruebaBaraja);
-        
+
         System.out.println("\n las cartas sacadas:");
         for (int i = 0; i < cartasSacadas.length; i++) {
             System.out.println(cartasSacadas[i]);

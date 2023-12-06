@@ -75,13 +75,13 @@ public class Baraja {
 
         for (int i = 0; i < movimientos; i++) {
             Random r = new Random();
-            int cartaAMover = r.nextInt(40);
-            int otraCarta = r.nextInt(40);
-            Naipe cartaTemporal = new Naipe(array[cartaAMover].getNumero(), array[cartaAMover].getPalo());
-            array[cartaAMover].setNumero(array[otraCarta].getNumero());
-            array[cartaAMover].setPalo(array[otraCarta].getPalo());
-            array[otraCarta].setNumero(cartaTemporal.getNumero());
-            array[otraCarta].setPalo(cartaTemporal.getPalo());
+            int cartaInicial = r.nextInt(40);
+            int posicionFinal = r.nextInt(40);
+            Naipe cartaTemporal = new Naipe(array[cartaInicial].getNumero(), array[cartaInicial].getPalo());
+            array[cartaInicial].setNumero(array[posicionFinal].getNumero());
+            array[cartaInicial].setPalo(array[posicionFinal].getPalo());
+            array[posicionFinal].setNumero(cartaTemporal.getNumero());
+            array[posicionFinal].setPalo(cartaTemporal.getPalo());
         }
 
     }
