@@ -11,4 +11,5 @@
         <maven.compiler.target>20</maven.compiler.target>
         <exec.mainClass>daw.Baraja</exec.mainClass>
     </properties>
+    <name>tarea4FDanielNavarro</name>
 </project>
