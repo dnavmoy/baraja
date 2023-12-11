@@ -14,7 +14,8 @@ import java.util.Random;
  */
 public class Baraja {
 
-    public static Naipe[] array = new Naipe[40];
+    public static final int TAMANO_BARAJA = 40;
+    private Naipe[] array = new Naipe[TAMANO_BARAJA];
 
     public Baraja() {
 
@@ -75,8 +76,8 @@ public class Baraja {
 
         for (int i = 0; i < movimientos; i++) {
             Random r = new Random();
-            int cartaInicial = r.nextInt(40);
-            int posicionFinal = r.nextInt(40);
+            int cartaInicial = r.nextInt(TAMANO_BARAJA);
+            int posicionFinal = r.nextInt(TAMANO_BARAJA);
             Naipe cartaTemporal = new Naipe(array[cartaInicial].getNumero(), array[cartaInicial].getPalo());
             array[cartaInicial].setNumero(array[posicionFinal].getNumero());
             array[cartaInicial].setPalo(array[posicionFinal].getPalo());
@@ -95,7 +96,7 @@ public class Baraja {
         } else {
             daw.Naipe[] cartasSacadas = new daw.Naipe[numCartas];
             for (int i = 0; i < cartasSacadas.length; i++) {
-                int cartaASacar = r.nextInt(40);
+                int cartaASacar = r.nextInt(TAMANO_BARAJA);
                 if (array[cartaASacar] == null) {
                     i--;
                 } else {

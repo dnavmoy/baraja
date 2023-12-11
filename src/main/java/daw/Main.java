@@ -18,6 +18,7 @@ public class Main {
             carta = new Naipe();
             System.out.println(carta);
         } while (!((carta.getNumero() == ReyOros.getNumero()) && carta.getPalo() == ReyOros.getPalo()));
+        
         System.out.println("ha mostrado el rey de oros?\n");
 
         System.out.println("Mostrar una baraja entera: ");
