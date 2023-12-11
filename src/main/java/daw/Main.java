@@ -23,26 +23,29 @@ public class Main {
 
         System.out.println("Mostrar una baraja entera: ");
 
-        parteB.Baraja pruebaBaraja = new parteB.Baraja();
+        parteB.Baraja NuevaBaraja = new parteB.Baraja();
 
-        System.out.println(pruebaBaraja);
+        System.out.println(NuevaBaraja);
         System.out.println("\n barajo 50 cartas");
 
-        pruebaBaraja.barajar(50);
-        System.out.println(pruebaBaraja);
+        NuevaBaraja.barajar(50);
+        System.out.println(NuevaBaraja);
 
         int sacarCartas = 15;
 
         System.out.println("saco " + sacarCartas + " cartas");
         Naipe[] cartasSacadas = new Naipe[sacarCartas];
-        cartasSacadas = pruebaBaraja.sacar(sacarCartas);
+        cartasSacadas = NuevaBaraja.sacar(sacarCartas);
         System.out.println("como queda la baraja: ");
-        System.out.println(pruebaBaraja);
+        System.out.println(NuevaBaraja);
 
         System.out.println("\n las cartas sacadas:");
         for (int i = 0; i < cartasSacadas.length; i++) {
             System.out.println(cartasSacadas[i]);
         }
 
+        System.out.println("la baraja reducidad deberia estar aqui: ");
+        NuevaBaraja.reorganizarBaraja();
+        System.out.println(NuevaBaraja);
     }
 }

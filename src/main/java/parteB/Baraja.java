@@ -14,7 +14,7 @@ import java.util.Random;
  */
 public class Baraja {
 
-    public static final int TAMANO_BARAJA = 40;
+    public static int TAMANO_BARAJA = 40;
     private Naipe[] array = new Naipe[TAMANO_BARAJA];
 
     public Baraja() {
@@ -32,7 +32,13 @@ public class Baraja {
             array[z + 30] = new Naipe(z + 1, Palos.Bastos);
         }
 
-        this.array = array;
+    }
+
+    public Baraja(int tamano) {
+        Naipe[] barajatamano = new Naipe[tamano];
+
+        this.array = barajatamano;
+
     }
 
     public Naipe[] getArray() {
@@ -108,4 +114,23 @@ public class Baraja {
         }
 
     }
+
+    public void reorganizarBaraja() {
+
+        int contador = 0;
+        for (int i = 0; i < array.length; i++) {
+
+            if (array[i] == null) {
+                contador++;
+            }
+        }
+        Baraja barajaReducida = new Baraja(contador);
+
+        for (int i = 0; i < barajaReducida.array.length; i++) {
+
+            this.array[i]=new Naipe();
+        }
+        
+    }
+
 }
