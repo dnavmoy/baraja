@@ -18,19 +18,21 @@ public class Baraja {
     private Naipe[] array = new Naipe[TAMANO_BARAJA];
 
     public Baraja() {
-
-        for (int z = 0; z < 10; z++) {
-            array[z] = new Naipe(z + 1, Palos.Oro);
-        }
-        for (int z = 0; z < 10; z++) {
-            array[z + 10] = new Naipe(z + 1, Palos.Copa);
-        }
-        for (int z = 0; z < 10; z++) {
-            array[z + 20] = new Naipe(z + 1, Palos.Espadas);
-        }
-        for (int z = 0; z < 10; z++) {
-            array[z + 30] = new Naipe(z + 1, Palos.Bastos);
-        }
+        for (int i=0; )
+        
+//
+//        for (int z = 0; z < 10; z++) {
+//            array[z] = new Naipe(z + 1, Palos.Oro);
+//        }
+//        for (int z = 0; z < 10; z++) {
+//            array[z + 10] = new Naipe(z + 1, Palos.Copa);
+//        }
+//        for (int z = 0; z < 10; z++) {
+//            array[z + 20] = new Naipe(z + 1, Palos.Espadas);
+//        }
+//        for (int z = 0; z < 10; z++) {
+//            array[z + 30] = new Naipe(z + 1, Palos.Bastos);
+//        }
 
     }
 
