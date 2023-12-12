@@ -14,12 +14,24 @@ import java.util.Random;
  */
 public class Baraja {
 
-    public static int TAMANO_BARAJA = 40;
+    public static int numeroCartas = Naipe.ultimaCarta;
+    public static int TAMANO_BARAJA = Naipe.ultimaCarta*Palos.values().length;
     private Naipe[] array = new Naipe[TAMANO_BARAJA];
+    
 
     public Baraja() {
-        for (int i=0; )
-        
+        int contador = 0;
+//       
+
+        for (int z = 0; z < Palos.values().length; z++) {
+            for (int i = 1; i < numeroCartas+1; i++) {
+                array[contador] = new Naipe(i, Palos.values()[z]);
+                contador++;
+            }
+        }
+
+    
+
 //
 //        for (int z = 0; z < 10; z++) {
 //            array[z] = new Naipe(z + 1, Palos.Oro);
@@ -33,10 +45,9 @@ public class Baraja {
 //        for (int z = 0; z < 10; z++) {
 //            array[z + 30] = new Naipe(z + 1, Palos.Bastos);
 //        }
+}
 
-    }
-
-    public Baraja(int tamano) {
+public Baraja(int tamano) {
         Naipe[] barajatamano = new Naipe[tamano];
 
         this.array = barajatamano;
@@ -52,7 +63,7 @@ public class Baraja {
     }
 
     @Override
-    public String toString() {
+public String toString() {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < array.length; i++) {
             sb.append("\n naipe{");

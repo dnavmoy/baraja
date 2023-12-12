@@ -19,13 +19,13 @@ public class Naipe {
 //   2 parametros- numero de carta y palo si no es correcto lanzar excepcion
 //   
     Random r = new Random();
-    private final int ultimaCarta = 10;
+    public static final int ultimaCarta = 10;
 
     private int numero;
     private Palos palo;
 
     public Naipe(int numero, Palos palo) {
-        if (numero < 1 || numero > 10) {
+        if (numero < 1 || numero > ultimaCarta) {
             throw new IllegalArgumentException("numero de carta no valido");
         }
         this.numero = numero;
@@ -58,7 +58,7 @@ public class Naipe {
     }
 
     public void setNumero(int numero) {
-         if (numero < 1 || numero > 10) {
+         if (numero < 1 || numero > ultimaCarta) {
             throw new IllegalArgumentException("numero de carta no valido");
         }
         this.numero = numero;
