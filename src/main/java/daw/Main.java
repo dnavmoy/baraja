@@ -3,6 +3,8 @@
  */
 package daw;
 
+import parteB.Baraja;
+
 /**
  *
  * @author daniel
@@ -18,7 +20,7 @@ public class Main {
             carta = new Naipe();
             System.out.println(carta);
         } while (!((carta.getNumero() == ReyOros.getNumero()) && carta.getPalo() == ReyOros.getPalo()));
-        
+
         System.out.println("ha mostrado el rey de oros?\n");
 
         System.out.println("Mostrar una baraja entera: ");
@@ -31,7 +33,7 @@ public class Main {
         NuevaBaraja.barajar(50);
         System.out.println(NuevaBaraja);
 
-        int sacarCartas = 15;
+        int sacarCartas = 35;
 
         System.out.println("saco " + sacarCartas + " cartas");
         Naipe[] cartasSacadas = new Naipe[sacarCartas];
@@ -45,7 +47,30 @@ public class Main {
         }
 
         System.out.println("la baraja reducidad deberia estar aqui: ");
-        NuevaBaraja.reorganizarBaraja();
+
+        NuevaBaraja= reorganizarBaraja(NuevaBaraja);
+
         System.out.println(NuevaBaraja);
+    }
+
+    public static Baraja reorganizarBaraja(Baraja baraja) {
+
+       int vacias =0;
+       for (int i = 0; i < baraja.getArray().length; i++) {
+            if (baraja.getArray()[i] == null) {
+           vacias++;
+            }
+       }
+        
+       Baraja barajaTemporal = new Baraja((baraja.getArray().length)-vacias);
+        int contador = 0;
+        for (int i = 0; i < baraja.getArray().length; i++) {
+            if (baraja.getArray()[i] != null) {
+                barajaTemporal.getArray()[contador]=baraja.getArray()[i];
+                contador++;
+            }
+        }
+        return baraja=barajaTemporal;
+        
     }
 }

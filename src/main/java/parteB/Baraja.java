@@ -115,22 +115,6 @@ public class Baraja {
 
     }
 
-    public void reorganizarBaraja() {
-
-        int contador = 0;
-        for (int i = 0; i < array.length; i++) {
-
-            if (array[i] == null) {
-                contador++;
-            }
-        }
-        Baraja barajaReducida = new Baraja(contador);
-
-        for (int i = 0; i < barajaReducida.array.length; i++) {
-
-            this.array[i]=new Naipe();
-        }
-        
-    }
+    
 
 }
