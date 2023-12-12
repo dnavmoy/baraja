@@ -15,22 +15,19 @@ import java.util.Random;
 public class Baraja {
 
     public static int numeroCartas = Naipe.ultimaCarta;
-    public static int TAMANO_BARAJA = Naipe.ultimaCarta*Palos.values().length;
+    public static int TAMANO_BARAJA = Naipe.ultimaCarta * Palos.values().length;
     private Naipe[] array = new Naipe[TAMANO_BARAJA];
-    
 
     public Baraja() {
         int contador = 0;
 //       
 
         for (int z = 0; z < Palos.values().length; z++) {
-            for (int i = 1; i < numeroCartas+1; i++) {
+            for (int i = 1; i < numeroCartas + 1; i++) {
                 array[contador] = new Naipe(i, Palos.values()[z]);
                 contador++;
             }
         }
-
-    
 
 //
 //        for (int z = 0; z < 10; z++) {
@@ -45,9 +42,9 @@ public class Baraja {
 //        for (int z = 0; z < 10; z++) {
 //            array[z + 30] = new Naipe(z + 1, Palos.Bastos);
 //        }
-}
+    }
 
-public Baraja(int tamano) {
+    public Baraja(int tamano) {
         Naipe[] barajatamano = new Naipe[tamano];
 
         this.array = barajatamano;
@@ -63,7 +60,7 @@ public Baraja(int tamano) {
     }
 
     @Override
-public String toString() {
+    public String toString() {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < array.length; i++) {
             sb.append("\n naipe{");
@@ -123,11 +120,32 @@ public String toString() {
                     array[cartaASacar] = null;
                 }
             }
+            
+            //reorganizarBaraja();
             return cartasSacadas;
         }
 
     }
 
-    
+    public void reorganizarBaraja() {
 
+        int vacias = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == null) {
+                vacias++;
+            }
+        }
+
+        Baraja barajaTemporal = new Baraja(array.length - vacias);
+        int contador = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] != null) {
+                barajaTemporal.getArray()[contador] = array[i];
+                contador++;
+            }
+        }
+        
+     
+
+    }
 }
