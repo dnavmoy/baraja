@@ -48,7 +48,7 @@ public class Main {
 
         System.out.println("la baraja reducidad deberia estar aqui: ");
 
-        //NuevaBaraja= reorganizarBaraja(NuevaBaraja);
+        NuevaBaraja= reorganizarBaraja(NuevaBaraja);
 
         System.out.println(NuevaBaraja);
     }
